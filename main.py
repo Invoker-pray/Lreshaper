@@ -1,5 +1,5 @@
 import argparse
-from reshapers import reshaper
+import start
 
 def main():
     parser = argparse.ArgumentParser(description="reshape your dataset's labels.")
@@ -15,7 +15,7 @@ def main():
 
 
     args = parser.parse_args()
-    reshaper(args.mode, args.data, args.outpath, args.labelname, args.labelnumber, args.newname, args.newnumber)
+    start.start(args.mode, args.data, args.outpath, args.labelname, args.labelnumber, args.newname, args.newnumber)
 
 
 
